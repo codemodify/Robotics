@@ -1,0 +1,40 @@
+
+To Run Model
+roslaunch sr_hand gazebo_hand.launch
+roslaunch sr_hand gazebo_arm_and_hand.launch
+rosrun gazebo gui
+
+
+Then run hand movement by script
+cd /home/user/fuerte_workspace/sandbox
+python moveRobot.py
+python moveRobotCommand.py
+
+
+Then run hand movement by command line
+rostopic pub /sh_ffj0_mixed_position_velocity_controller/command std_msgs/Float64 0.5 # pointer top
+rostopic pub /sh_ffj3_mixed_position_velocity_controller/command std_msgs/Float64 0.5 # pointer base
+rostopic pub /sh_ffj4_mixed_position_velocity_controller/command std_msgs/Float64 0.5 # pointer sideway
+
+rostopic pub /sh_lfj0_mixed_position_velocity_controller/command std_msgs/Float64 0.5 # small top
+rostopic pub /sh_lfj3_mixed_position_velocity_controller/command std_msgs/Float64 0.5 # small base
+rostopic pub /sh_lfj4_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_lfj5_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+
+rostopic pub /sh_mfj0_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_mfj3_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_mfj4_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+
+rostopic pub /sh_rfj0_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_rfj3_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_rfj4_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+
+rostopic pub /sh_thj1_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_thj2_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_thj3_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_thj4_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_thj5_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+
+rostopic pub /sh_wrj1_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+rostopic pub /sh_wrj2_mixed_position_velocity_controller/command std_msgs/Float64 0.5
+
